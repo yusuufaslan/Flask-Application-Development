@@ -8,12 +8,12 @@ app = Flask(__name__)
 def home_page():
     today = datetime.today()
     day_name = today.strftime("%A")
-    return render_template("home_v5.html", day=day_name)
+    return render_template("home_v2.html", day=day_name)
 
 
 @app.route("/movies")
 def movies_page():
-    return render_template("movies_v3.html")
+    return render_template("movies.html")
 
 
 if __name__ == "__main__":
