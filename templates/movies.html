@@ -4,24 +4,28 @@
     <h1 class="title">Movies</h1>
 
     {% if movies %}
-    <table class="table is-striped is-fullWidth">
+    <form action="" method="post" name="movie_list">
+      <table class="table is-striped is-fullwidth">
         {% for movie_key, movie in movies %}
         <tr>
-            <td>
-<!--            {{ movie.title }}-->
-<!--            {% if movie.year %}-->
-<!--                ({{ movie.year }})-->
-<!--            {% endif %}-->
-
-                <a href="{{ url_for('movie_page', movie_key=movie_key) }}">
-                    {{ movie.title }}
-                    {% if movie.year %}
-                        ({{ movie.year }})
-                    {% endif %}
-                </a>
-            </td>
+          <td>
+            <label class="checkbox">
+              <input type="checkbox" name="movie_keys" value="{{ movie_key }}"/>
+            </label>
+            <a href="{{ url_for('movie_page', movie_key=movie_key) }}">
+              {{ movie.title }}
+              {% if movie.year %} ({{ movie.year }}) {% endif %}
+            </a>
+          </td>
         </tr>
         {% endfor %}
-    </table>
+      </table>
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-danger is-small">Delete</button>
+        </div>
+      </div>
+    </form>
     {% endif %}
 {% endblock %}
