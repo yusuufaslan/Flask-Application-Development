@@ -11,11 +11,6 @@
                 <input type="text" name="title" class="input" required="required"/>
             </div>
         </div>
-        {% if 'title' in values.errors %}
-            <p class="help has-background-warning">
-                {{ values.errors['title'] }}
-            </p>
-        {% endif %}
 
         <div class="field">
             <label for="year" class="label">Year</label>
@@ -24,12 +19,6 @@
                        min="{{min_year}}" max="{{max_year}}"/>
             </div>
         </div>
-
-        {% if 'year' in values.errors %}
-            <p class="help has-background-warning">
-                {{ values.errors['year'] }}
-            </p>
-        {% endif %}
 
         <div class="field is-grouped">
             <div class="control">
