@@ -3,4 +3,4 @@ This repository contains practices related Python Flask Application Development 
 
 You can reach the other tutorial sources and explanations from this url: https://web.itu.edu.tr/uyar/fad/index.html
 
-Most recent version v03.03 was released on September 25, 2022.
+This project was not fully completed. Since, I left it for later time to progress simultaneously with the university course.
